@@ -34,12 +34,12 @@
             echo dmstr\widgets\Menu::widget(
                 [
                     "encodeLabels" => false,
-                    "options" => ["class" => "sidebar-menu tree"],
+                    "options" => ["class" => "sidebar-menu tree", 'data-widget'=> 'tree'],
                     "items" => MenuHelper::getAssignedMenu(Yii::$app->user->id),
                 ]
             );
-        echo dmstr\widgets\Menu::widget(
-            [
+            echo dmstr\widgets\Menu::widget(
+                [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
@@ -72,7 +72,7 @@
                             ],
                         ],
                     ],
-                    [
+                    /*[
                         'label' => '权限控制',
                         'icon' => 'share',
                         'url' => '#',
@@ -85,7 +85,7 @@
                             ['label' => '菜单', 'icon' => 'dashboard', 'url' => ['/admin/menu'],],
                             ['label' => '规则', 'icon' => 'dashboard', 'url' => ['/admin/rule'],],
                         ]
-                    ],
+                    ],*/
                 ],
             ]
         ) ?>
