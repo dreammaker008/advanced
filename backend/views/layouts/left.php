@@ -28,7 +28,7 @@
         <?php
         
             use mdm\admin\components\MenuHelper;
-            var_dump(Yii::$app->user->id,MenuHelper::getAssignedMenu(Yii::$app->user->id));exit;
+            
         ?>
         <?php 
             echo dmstr\widgets\Menu::widget(
