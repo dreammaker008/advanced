@@ -28,7 +28,7 @@
         <?php
         
             use mdm\admin\components\MenuHelper;
-            
+
         ?>
         <?php 
             echo dmstr\widgets\Menu::widget(
@@ -38,7 +38,7 @@
                     "items" => MenuHelper::getAssignedMenu(Yii::$app->user->id),
                 ]
             );
-        /*echo dmstr\widgets\Menu::widget(
+        echo dmstr\widgets\Menu::widget(
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
@@ -88,7 +88,7 @@
                     ],
                 ],
             ]
-        )*/ ?>
+        ) ?>
 
     </section>
 
