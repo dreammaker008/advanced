@@ -19,7 +19,8 @@ class m190228_015952_create_goods_table extends Migration
         }
         $this->createTable('{{%goods}}', [
             'id' => $this->primaryKey(),
-            'name' => $this->string(32)->notNull()
+            'name' => $this->string(32)->notNull(),
+            'create_time' => $this->datetime(),
         ],$tableOptions);
     }
 

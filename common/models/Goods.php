@@ -9,6 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property string $name
+ * @property string $create_time
  */
 class Goods extends \yii\db\ActiveRecord
 {
@@ -27,6 +28,7 @@ class Goods extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'required'],
+            [['create_time'], 'safe'],
             [['name'], 'string', 'max' => 32],
         ];
     }
@@ -39,6 +41,7 @@ class Goods extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'name' => Yii::t('app', 'Name'),
+            'create_time' => Yii::t('app', 'Create Time'),
         ];
     }
 }
