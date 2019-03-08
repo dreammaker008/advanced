@@ -15,6 +15,10 @@ return [
         'request' => [
             'csrfParam' => '_csrf-api',
         ],
+        'response' => [
+            'format' => yii\web\Response::FORMAT_JSON,
+            'charset' => 'utf-8',
+        ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
@@ -42,7 +46,7 @@ return [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'Goods'],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'goods'],
             ],
         ],
         

@@ -2,11 +2,10 @@
 
 namespace api\controllers;
 
-class GoodsController extends \yii\rest\Controller
+use Yii;
+
+class GoodsController extends \yii\rest\ActiveController
 {
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
+	public $modelClass = 'common\models\Goods';
 
 }
