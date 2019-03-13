@@ -186,4 +186,9 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+    public function testCall()
+    {
+        var_dump('in user test call');
+    }
 }

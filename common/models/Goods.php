@@ -18,7 +18,7 @@ class Goods extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'goods';
+        return '{{%goods}}';
     }
 
     /**
@@ -43,5 +43,21 @@ class Goods extends \yii\db\ActiveRecord
             'name' => Yii::t('app', 'Name'),
             'create_time' => Yii::t('app', 'Create Time'),
         ];
+    }
+
+    public static function consume($msg)
+    {
+        var_dump('here');
+        // $goods = new self();
+        // $goods->name = $msg->payload;
+        // $goods->save();
+        $user = new \common\models\User();
+        $user->testCall();
+        self::secondCall();
+    }
+
+    private static function secondCall()
+    {
+        var_dump('there');
     }
 }
