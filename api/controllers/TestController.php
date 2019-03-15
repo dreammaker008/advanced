@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\controllers;
+namespace api\controllers;
 use common\models\Goods;
 
 class TestController extends \yii\web\Controller
@@ -27,7 +27,7 @@ class TestController extends \yii\web\Controller
     public function actionUpdate()
     {
 
-        $res = Goods::updateAll(['name'=>'fff'],['id'=>1]);
+        $res = Goods::updateAll(['name'=>new \yii\db\Expression('name+1')],['id'=>1]);
         var_dump($res);
     }
 
