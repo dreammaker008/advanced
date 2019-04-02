@@ -31,4 +31,9 @@ class TestController extends \yii\web\Controller
         var_dump($res);
     }
 
+    public function actionTest()
+    {
+    	var_dump((new Goods())->selectAll(['name'=>'f']));
+    }
+
 }

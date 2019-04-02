@@ -31,4 +31,14 @@ class TestController extends \yii\web\Controller
         var_dump($res);
     }
 
+    public function actionNsqPub()
+    {
+
+        $nsq = new \nsqphp\nsqphp;
+        $res = $nsq->publishTo('localhost',1)
+            ->publish('mytopic2', new \nsqphp\Message\Message('some message payload'));
+
+        var_dump($res);
+    }
+
 }

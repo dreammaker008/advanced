@@ -22,7 +22,9 @@
         "dmstr/yii2-adminlte-asset": "2.*",
         "codeception/codeception": "^2.5",
         "codeception/specify": "^1.1",
-        "codeception/verify": "^1.0"
+        "codeception/verify": "^1.0",
+        "davegardnerisme/nsqphp": "dev-master",
+        "okstuff/phpnsq": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

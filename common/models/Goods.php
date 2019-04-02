@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use common\models\BaseModel;
 
 /**
  * This is the model class for table "goods".
@@ -11,7 +12,7 @@ use Yii;
  * @property string $name
  * @property string $create_time
  */
-class Goods extends \yii\db\ActiveRecord
+class Goods extends BaseModel
 {
     /**
      * {@inheritdoc}
