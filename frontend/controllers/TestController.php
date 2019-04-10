@@ -24,6 +24,13 @@ class TestController extends \yii\web\Controller
         var_dump($res);
     }
 
+    public function actionAddAll()
+    {
+
+        $res = Goods::getDb()->createCommand()->batchInsert(Goods::tableName(),['name'],[['tttt']])->execute();
+        var_dump($res);
+    }
+
     public function actionUpdate()
     {
 
