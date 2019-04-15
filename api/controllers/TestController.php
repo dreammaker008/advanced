@@ -2,6 +2,7 @@
 
 namespace api\controllers;
 use common\models\Goods;
+use common\models\GoodsCate;
 
 class TestController extends \yii\web\Controller
 {
@@ -14,6 +15,7 @@ class TestController extends \yii\web\Controller
         		'id'=>[1,2]
         	]
         )->limit(100)->createCommand()->getRawSql();
+        
         var_dump($sql);
     }
 
@@ -40,5 +42,7 @@ class TestController extends \yii\web\Controller
 
         var_dump($res);
     }
+
+
 
 }

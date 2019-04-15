@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 use common\models\Goods;
+use common\models\GoodsCate;
 
 class TestController extends \yii\web\Controller
 {
@@ -41,6 +42,13 @@ class TestController extends \yii\web\Controller
     public function actionTest()
     {
     	var_dump((new Goods())->selectAll(['name'=>'f']));
+    }
+
+    public function actionJoin()
+    {
+        
+        $res = GoodsCate::find()->alias('c')->leftJoin(Goods::tableName().' as g','c.id=g.cate')->select('c.id cate_id,c.name as cate_name,g.id goods_id,g.name')->where(['c.id'=>1])->asArray()->all();
+        var_dump($res);exit;
     }
 
 }
